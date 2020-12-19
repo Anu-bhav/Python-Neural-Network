@@ -66,10 +66,17 @@ weights = [[0.2, 0.8, -0.5, 1.0], [0.5, -0.91, 0.26, -0.5], [-0.26, -0.27, 0.17,
 bias = 2
 
 output = np.dot(weights, inputs) + bias  # always use weights first in dot product
+
 # weights is used first as it is a interpreted as a matrix (3D Array).
 # if input is used first, an error is thrown and the program will not run.
-# the error occurs because the matrix needs to always be in the first position.
-# both columns needs to be 4 in size as each input needs to have a weight associated to it.
+# the error occurs because the 2nd index of the first matrix (weights) has to equal to the 1st index of 2nd matrix (inputs)
+
+# weights: shape(3, 4)
+# inputs:  shape(4,)
+
+# 2nd index of weights' shape is 4
+# 1st index of inputs' shape is 4
+# both as equal hence no error is obtained.
 
 # the shape of weights is 3 x 4 (3 rows 4 columns) or shape(3,4)
 # print(np.array(weights).shape)

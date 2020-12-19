@@ -2,6 +2,6 @@
     "python.pythonPath": ".venv/bin/python",
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
-    "files.autoSave": "onWindowChange",
+    "files.autoSave": "onFocusChange",
     "editor.formatOnPaste": true
 }
